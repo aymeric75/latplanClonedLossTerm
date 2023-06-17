@@ -1,0 +1,83 @@
+Default float: float32
+{'mode': 'learn', 'track': 'sokoban_image-20000-global-global-2-train', 'num_examples': 20000, 'aeclass': 'CubeSpaceAE_AMA4Conv', 'comment': 'kltune2', 'hash': '05-11T07:43:01.194'}
+loaded. picsize: [28 28  3]
+(19999, 2, 28, 28, 3)
+normalized shape: (28, 28, 3) (28, 28, 3)
+lol1
+lol2
+class precedence list:
+  <class 'latplan.model.ConvolutionalConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus'>
+  <class 'latplan.mixins.encoder_decoder.StridedConvolutionalMixin'>
+  <class 'latplan.mixins.encoder_decoder.ConvolutionalMixin'>
+  <class 'latplan.model.ConcreteDetNormalizedLogitAddBidirectionalTransitionAEPlus'>
+  <class 'latplan.model.DetActionMixin'>
+  <class 'latplan.model.NormalizedLogitAddBidirectionalMixin'>
+  <class 'latplan.model.NormalizedLogitAddPreconditionMixin'>
+  <class 'latplan.model.NormalizedLogitAddEffectMixin'>
+  <class 'latplan.model.LogitEffectMixin'>
+  <class 'latplan.model.BaseActionMixinAMA4Plus'>
+  <class 'latplan.model.BidirectionalMixin'>
+  <class 'latplan.model.PreconditionMixin'>
+  <class 'latplan.model.EffectMixin'>
+  <class 'latplan.model.BaseActionMixin'>
+  <class 'latplan.model.TransitionWrapper'>
+  <class 'latplan.model.StateAE'>
+  <class 'latplan.mixins.latent.ConcreteLatentMixin'>
+  <class 'latplan.model.EarlyStopMixin'>
+  <class 'latplan.mixins.encoder_decoder.FullConnectedMixin'>
+  <class 'latplan.mixins.encoder_decoder.EncoderDecoderMixin'>
+  <class 'latplan.model.AE'>
+  <class 'latplan.network.Network'>
+  <class 'object'>
+clearning tf session
+cleared tf session
+Building networks
+building a convolutional encoder
+pool per layer: 1 depth: 2 total pool: 1 H: 28 W: 28 dH: 0 dW: 0
+<keras.layers.convolutional.Conv2D object at 0x7fd65dfb8be0>
+[0, 28, 28, 3] -> (0, 28, 28, 32) : <keras.layers.convolutional.Conv2D object at 0x7fd65dfb8be0>
+<keras.layers.normalization.BatchNormalization object at 0x7fd6557fbd00>
+(0, 28, 28, 32) -> (0, 28, 28, 32) : <keras.layers.normalization.BatchNormalization object at 0x7fd6557fbd00>
+<keras.layers.core.Dropout object at 0x7fd6557fbdc0>
+(0, 28, 28, 32) -> (0, 28, 28, 32) : <keras.layers.core.Dropout object at 0x7fd6557fbdc0>
+<keras.layers.convolutional.Conv2D object at 0x7fd6557fbe20>
+(0, 28, 28, 32) -> (0, 28, 28, 32) : <keras.layers.convolutional.Conv2D object at 0x7fd6557fbe20>
+<keras.layers.normalization.BatchNormalization object at 0x7fd6557fbf40>
+(0, 28, 28, 32) -> (0, 28, 28, 32) : <keras.layers.normalization.BatchNormalization object at 0x7fd6557fbf40>
+<keras.layers.core.Dropout object at 0x7fd6557fbfd0>
+(0, 28, 28, 32) -> (0, 28, 28, 32) : <keras.layers.core.Dropout object at 0x7fd6557fbfd0>
+latent space shape is (28, 28, 32) : 300 propositions in total
+building a convolutional decoder
+pool per layer: 1 depth: 2 total pool: 1 H: 28 W: 28 dH: 0 dW: 0
+<keras.layers.core.Reshape object at 0x7fd658060610>
+[0, 28, 28, 32] -> (0, 28, 28, 32) : <keras.layers.core.Reshape object at 0x7fd658060610>
+<keras.layers.convolutional.Conv2DTranspose object at 0x7fd658060640>
+(0, 28, 28, 32) -> (0, 28, 28, 32) : <keras.layers.convolutional.Conv2DTranspose object at 0x7fd658060640>
+<keras.layers.normalization.BatchNormalization object at 0x7fd658060850>
+(0, 28, 28, 32) -> (0, 28, 28, 32) : <keras.layers.normalization.BatchNormalization object at 0x7fd658060850>
+<keras.layers.core.Dropout object at 0x7fd658060d60>
+(0, 28, 28, 32) -> (0, 28, 28, 32) : <keras.layers.core.Dropout object at 0x7fd658060d60>
+<keras.layers.convolutional.Conv2DTranspose object at 0x7fd658060760>
+(0, 28, 28, 32) -> (0, 28, 28, 3) : <keras.layers.convolutional.Conv2DTranspose object at 0x7fd658060760>
+Tensor("strided_slice:0", shape=(?, 28, 28, 3), dtype=float32)
+Tensor("Sigmoid:0", shape=(?, 300), dtype=float32)
+Tensor("dmerge_5/concat:0", shape=(?, 2, 28, 28, 3), dtype=float32)
+Tensor("dmerge_6/concat:0", shape=(?, 2, 300), dtype=float32)
+Network built
+Building auxiliary networks
+Auxiliary network built
+self.losses
+[<function BaseActionMixinAMA4Plus._build_primary.<locals>.loss at 0x7fd65313c3a0>]
+Compiling networks
+there are 1 networks.
+there are 1 optimizers.
+there are 1 losses.
+compiling <keras.engine.training.Model object at 0x7fd6531396a0> with <keras_radam.optimizers.RAdam object at 0x7fd650c61eb0>, <function BaseActionMixinAMA4Plus._build_primary.<locals>.loss at 0x7fd65313c3a0>.
+140558493533088
+[<tf.Tensor 'my_regularizer_layer_1/mul:0' shape=() dtype=float32>]
+[<function BaseActionMixinAMA4Plus._build_primary.<locals>.loss at 0x7fd65313c3a0>]
+Network compiled
+loaded. picsize: [28 28  3]
+(19999, 2, 28, 28, 3)
+normalized shape: (28, 28, 3) (28, 28, 3)
+in finally

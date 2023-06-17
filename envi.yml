@@ -1,0 +1,4 @@
+name: latplan
+channels:
+  - defaults
+prefix: /root/anaconda3/envs/latplan
